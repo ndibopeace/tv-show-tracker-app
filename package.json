@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "main": "expo-router/entry",
   "dependencies": {
-    "@expo/vector-icons": "^15.0.2",
+    "@expo/ui": "~57.0.22",
+    "@react-native-vector-icons/ant-design": "^13.1.4",
+    "@react-native-vector-icons/evil-icons": "^13.1.4",
+    "@react-native-vector-icons/fontawesome": "^13.1.4",
     "@react-native-vector-icons/fontawesome-free-solid": "^1.1.4",
+    "@react-native-vector-icons/ionicons": "^13.1.4",
     "@react-native-vector-icons/lucide": "^13.1.4",
     "expo": "~57.0.26",
     "expo-constants": "~57.0.20",

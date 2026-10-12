@@ -1,23 +1,8 @@
-import { StyleSheet, Text, View } from "react-native";
-import { Link } from "expo-router";
+import { View, StyleSheet, Text } from "react-native";
+import TvShows from "@components/_reusable/tvshow_renderer";
 
-export default function CurrentlyWatching() {
-    
-  return (
-    <View style={styles.container}>
-      <Text>Currently Watching </Text>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    // backgroundColor: "transparent",
-    // alignItems: "center",
-    // justifyContent: "center",
-    // borderWidth: 1,
-    // width: "90%",
-    // marginInline: "auto",
-  },
-});
+const CurrentlyWatching = () => (
+  <TvShows title="Currently Watching" />
+);
+const styles = StyleSheet.create({});
+export default CurrentlyWatching;

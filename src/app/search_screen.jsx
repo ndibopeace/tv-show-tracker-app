@@ -1,17 +1,75 @@
-import { View, Text, StyleSheet } from "react-native";
-// import  from "react-native";
-// import { AppText } from "@/components/AppText";
+import { StyleSheet, View, TextInput, Pressable, Text } from "react-native";
+import { Host, useNativeState, Row, Button } from "@expo/ui";
+import { useCallback } from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function SecondScreen() {
+export default function ControlledTextInputExample() {
+  const text = useNativeState("");
+
+  const handleChangeText = useCallback(
+    (value) => {
+      "worklet";
+      text.value = value === "Hello" ? "World" : value;
+      console.log(value);
+    },
+    [text],
+  );
+
   return (
-    <View className="justify-center flex-1 p-4">
-      <Text style={styles.size} >Search Screen</Text>
-    </View>
+    <SafeAreaView>
+      <View
+        // alignment="center"
+        style={{
+          backgroundColor: "red",
+          width: 200,
+          borderRadius: 25,
+          flexDirection: 'row',
+          alignItems: 'center'
+        }}
+      >
+        <TextInput
+          textStyle={{ fontSize: 20 }}
+          // style={{width: 200}}
+          textAlign="center"
+          value={text}
+          placeholder="Type here"
+          onChangeText={handleChangeText}
+        />
+        <Pressable onPress={()=>console.log('pressed')}>
+          <Text>Search</Text>
+        </Pressable>
+      </View>
+    </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  size: {
-    fontSize: 55,
-  },
-});
+//   return (
+//     <SafeAreaView style={{ flex: 1 }}>
+//       <Host
+//         // matchContents
+//         style={{
+//           flex: 1,
+//         }}
+//       >
+//         <View
+//           alignment="center"
+//           style={{
+//             backgroundColor: "red",
+
+//             // width: 200,
+//           }}
+//         >
+//           <TextInput
+//             textStyle={{ fontSize: 20 }}
+//             // style={{width: 200}}
+//             textAlign="center"
+//             value={text}
+//             placeholder="Type here"
+//             onChangeText={handleChangeText}
+//           />
+//           <Button label="search" />
+//         </View>
+//       </Host>
+//     </SafeAreaView>
+//   );
+// }

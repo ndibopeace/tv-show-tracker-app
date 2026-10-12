@@ -9,7 +9,7 @@ import Dropped from "@components/dropped";
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      {/* <StatusBar style="auto" /> */}
+      <StatusBar style="auto" />
       <CurrentlyWatching />
       {/* <Completed /> */}
       {/* <Watchlist /> */}
@@ -20,9 +20,9 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
-    height: "90%",
-    // backgroundColor: "#fff",
+    flex: 1,
+    // height: "90%",
+    backgroundColor: "lightgreen",
     // alignItems: "center",
     // justifyContent: "center",
   },
