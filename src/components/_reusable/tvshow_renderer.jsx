@@ -560,14 +560,13 @@ const watchedShowss = [
 ];
 
 const TvShowRenderer = ({ item }) => {
-  console.log("printed");
 
   return (
     <View
       key={item.id}
-      style={StyleSheet.create({
+      style={{
         flex: 1,
-      })}
+      }} 
     >
       <Image
         resizeMode="stretch"
@@ -586,7 +585,7 @@ const TvShowRenderer = ({ item }) => {
 
 // main component
 const TvShows = ({ watchedShowsss, title }) => (
-  <View style={StyleSheet.create({ height: 250, borderWidth: 2 })}>
+  <View style={{ height: 250, borderWidth: 2 }}>
     <View style={styles.container}>
       <Host matchContents>
         <Text style={[styles.text]}>{title}</Text>
